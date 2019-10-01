@@ -91,6 +91,7 @@ function addBox(element){
     date.appendChild(document.createTextNode(created))
     image.src = source
     image.alt = title
+    image.onclick = function(){openModal(source)};
     box.appendChild(image)
     box.appendChild(imageTitle)
     box.appendChild(date)
@@ -99,4 +100,14 @@ function addBox(element){
 
 temporaryData.forEach(element => addBox(element))
 
+function openModal(source){
+  let modal = document.getElementById("modal")
+  let modalImg = document.getElementById("modalContent")
+  modalImg.src = source
+  modal.style.display = "block";
+}
+let closeModalButton = document.getElementById("closeModal")
+closeModalButton.onclick = function() { 
+  modal.style.display = "none";
+}
 

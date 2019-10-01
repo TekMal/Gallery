@@ -6,3 +6,37 @@ body {
     font-family: 'Arimo', sans-serif;
     margin: 4em;
 }
+
+.modal{
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 70px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); 
+    .modal__image{
+        margin: auto;
+        display: block;
+        width: 100%; 
+        height: 100%; 
+        object-fit: contain; 
+        padding-bottom: 40px;
+    }
+    .modal__button--close{
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        &:hover{
+            cursor: pointer;
+            color: #bbb;
+        }
+    }
+}
