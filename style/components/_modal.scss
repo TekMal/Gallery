@@ -1,6 +1,3 @@
-$width: 100%;
-$height: 100%;
-
 .modal{
     display: none;
     position: fixed; 
@@ -9,14 +6,14 @@ $height: 100%;
     padding-bottom: 10px;
     left: 0;
     top: 0;
-    width: $width; 
-    height: $height; 
+    width: $widthForModal; 
+    height: $heightForModal; 
     background-color: rgba(0,0,0,0.8); 
     &__image{
         margin: auto;
         display: block;
-        width: $width; 
-        height: $height; 
+        width: $widthForModal; 
+        height: $heightForModal; 
         object-fit: contain; 
     }
     &__button--close{
