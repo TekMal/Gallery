@@ -84,15 +84,15 @@ let mainSection = document.getElementById("gallery")
 function addBox(galleryObject){
     let {id, title, created, source} = galleryObject
     let box = createElementWithClassname("div", "gallery__box")
-    let imageTitle = createElementWithClassname("h2", "gallery__box--title")
-    let date = createElementWithClassname("p", "gallery__box--date")
-    let image = createElementWithClassname("img", "gallery__box--image")
+    let imageTitle = createElementWithClassname("h2", "gallery__box__title")
+    let date = createElementWithClassname("p", "gallery__box__date")
+    let image = createElementWithClassname("img", "gallery__box__image")
     imageTitle .appendChild(document.createTextNode(title)) 
     date.appendChild(document.createTextNode(created))
     image.src = source
     image.id = id
     image.alt = title
-    image.onclick = function(){openModal(source)};
+    image.onclick = function(){openModal(source)}
     box.appendChild(image)
     box.appendChild(imageTitle)
     box.appendChild(date)
@@ -105,12 +105,12 @@ function openModal(source){
     let modal = document.getElementById("modal")
     let modalImg = document.getElementById("modalContent")
     modalImg.src = source
-    modal.style.display = "block";
+    modal.style.display = "block"
 }
 
 let closeModalButton = document.getElementById("closeModal")
 
 closeModalButton.onclick = function() { 
-    modal.style.display = "none";
+    modal.style.display = "none"
 }
 

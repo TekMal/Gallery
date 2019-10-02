@@ -1,5 +1,5 @@
-$modalWidth: 100%;
-$modalHeight: 100%;
+$width: 100%;
+$height: 100%;
 
 .modal{
     display: none;
@@ -8,19 +8,19 @@ $modalHeight: 100%;
     padding-top: 10px; 
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
+    width: $width; 
+    height: $height; 
     overflow: auto; 
     background-color: rgba(0,0,0,0.8); 
-    .modal__image{
+    &__image{
         margin: auto;
         display: block;
-        width: 100%; 
-        height: 100%; 
+        width: $width; 
+        height: $height; 
         object-fit: contain; 
         padding-bottom: 10px;
     }
-    .modal__button--close{
+    &__button--close{
         position: absolute;
         top: 20px;
         right: 35px;

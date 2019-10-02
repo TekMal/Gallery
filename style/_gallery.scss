@@ -1,31 +1,33 @@
+$spaceBetweenBoxesMedium: 0.7em;
+$spaceBetweenBoxesSmall: 0.5em;
 .gallery {
     column-count: 3;
     column-gap: 1em; 
     @media #{$break-medium} {
-        column-gap: 0.7em; 
+        column-gap: $spaceBetweenBoxesMedium; 
     }
     @media #{$break-small} {
-        column-gap: 0.5em; 
+        column-gap: $spaceBetweenBoxesSmall; 
     }
-    .gallery__box{
+    &__box{
         box-shadow: 4px 0px 11px -6px rgba(0,0,0,0.56);
         text-align: left;
         break-inside: avoid-column; 
         margin-bottom: 1em;
         @media #{$break-medium} {
-            margin-bottom: 0.7em;
+            margin-bottom: $spaceBetweenBoxesMedium;
         }
         @media #{$break-small} {
-            margin-bottom: 0.5em;
+            margin-bottom: $spaceBetweenBoxesSmall;
         }
-        .gallery__box--image{
+        &__image{
             width: 100%;
             &:hover{
                 cursor: pointer;
                 opacity: 0.9;
             }
         }
-        .gallery__box--title{
+        &__title{
             font-size: 20px;
             padding-left: 10px;
             color: #303030;
@@ -39,7 +41,7 @@
                 font-size: 8px;
             }
         }
-        .gallery__box--date{
+        &__date{
             font-size: 16px;
             padding-bottom: 10px;
             padding-left: 10px;
