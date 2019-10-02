@@ -1,8 +1,10 @@
+$spaceBetweenBoxesLarge: 1em;
 $spaceBetweenBoxesMedium: 0.7em;
 $spaceBetweenBoxesSmall: 0.5em;
+
 .gallery {
     column-count: 3;
-    column-gap: 1em; 
+    column-gap: $spaceBetweenBoxesLarge; 
     @media #{$break-medium} {
         column-gap: $spaceBetweenBoxesMedium; 
     }
@@ -13,7 +15,7 @@ $spaceBetweenBoxesSmall: 0.5em;
         box-shadow: 4px 0px 11px -6px rgba(0,0,0,0.56);
         text-align: left;
         break-inside: avoid-column; 
-        margin-bottom: 1em;
+        margin-bottom: $spaceBetweenBoxesLarge;
         @media #{$break-medium} {
             margin-bottom: $spaceBetweenBoxesMedium;
         }
@@ -45,7 +47,7 @@ $spaceBetweenBoxesSmall: 0.5em;
             font-size: 16px;
             padding-bottom: 10px;
             padding-left: 10px;
-            color: gray;
+            color: #808080;
             @media #{$break-large} {
                 font-size: 10px;
             }

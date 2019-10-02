@@ -81,7 +81,7 @@ function createElementWithClassname(elementTag, elementClassName){
 
 let mainSection = document.getElementById("gallery")
 
-function addBox(galleryObject){
+function addGalleryItem(galleryObject){
     let {id, title, created, source} = galleryObject
     let box = createElementWithClassname("div", "gallery__box")
     let imageTitle = createElementWithClassname("h2", "gallery__box__title")
@@ -99,7 +99,7 @@ function addBox(galleryObject){
     mainSection.appendChild(box)
 }
 
-temporaryData.forEach(galleryObject => addBox(galleryObject))
+temporaryData.forEach(galleryObject => addGalleryItem(galleryObject))
 
 function openModal(source){
     let modal = document.getElementById("modal")
